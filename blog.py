@@ -4,8 +4,11 @@ from flask import Flask, render_template
 app = Flask(__name__)
 @app.route("/")
 def index():
-    number=10
-    return render_template("index.html",num = number)
+    article =dict()
+    article["title"] = "Some Title"
+    article["body"] = "Body Sample"
+    article["author"] = "Somebody"
+    return render_template("index.html",article = article)
 @app.route("/about")
 def about():
     return "about"
