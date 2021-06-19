@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
 
-    <h1>{{article["title"]}}</h1>
-    <h1>{{article["body"]}}</h1>
-    <h1>{{article["author"]}}</h1>
 </head>
 <body>
-  
+  {% block myBlock %}
+  <h1>its index</h1>
+  {% endblock  %}
 </body>
 </html>
