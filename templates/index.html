@@ -7,12 +7,12 @@
     <p>It is a simple blog site with flask.</p>
 </div>
  
- {% if process==1 %}
- <p>First Process</p>
- {% elif process==2 %}
- <p>Second Process</p>
- {% else %}
- <p>Invalid Process</p>
- {% endif %}
+ <ul>
+     
+     {% for article in articles  %}
+         <li>Article Id: {{article.id}} - Title: {{article.title}}- Content: {{article.content}}</li>
+     {% endfor %}
+         
+ </ul>
 {% endblock body %}
     
